@@ -1,18 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mofaisal <mofaisal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 14:59:08 by mofaisal          #+#    #+#             */
-/*   Updated: 2022/10/30 18:40:33 by mofaisal         ###   ########.fr       */
+/*   Created: 2022/10/27 17:54:33 by mofaisal          #+#    #+#             */
+/*   Updated: 2022/10/30 18:35:34 by mofaisal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	int	i;
+
+	i = 0;
+	if (s != NULL)
+	{
+		while (s[i] != '\0')
+			write(fd, &s[i++], 1);
+	}
 }
+// int main ()
+//  {
+//      char letter[20] = "mohammed";
+//      ft_putstr_fd(letter, 1);
+//      return(0);
+//  }

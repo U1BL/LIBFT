@@ -6,38 +6,32 @@
 /*   By: mofaisal <mofaisal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 14:58:42 by mofaisal          #+#    #+#             */
-/*   Updated: 2022/10/09 19:43:16 by mofaisal         ###   ########.fr       */
+/*   Updated: 2022/10/27 20:24:15 by mofaisal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t	i;
-	char	*pt_dest;
-	char	*pt_src;
+	unsigned char	*dst2;
+	unsigned char	*src2;
 
-	i = 0;
-	pt_dest = (char *)dest;
-	pt_src = (char *)src;
-	if (!dest && !src)
+	if (!src && !dst)
 		return (NULL);
-	if (pt_src > pt_dest)
+	dst2 = (unsigned char *)dst;
+	src2 = (unsigned char *)src;
+	if (src < dst)
 	{
-		while (i < n)
-		{
-			pt_dest[i] = pt_src[i];
-			i++;
-		}
+		src2 = src2 + len - 1;
+		dst2 = dst2 + len - 1;
+		while (len--)
+			*dst2-- = *src2--;
 	}
-	else
+	else if (src >= dst)
 	{
-		while (i != n)
-		{
-			pt_dest[n - i - 1] = pt_src[n - i - 1];
-			i++;
-		}
+		while (len--)
+			*dst2++ = *src2++;
 	}
-	return (dest);
+	return (dst);
 }

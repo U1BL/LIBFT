@@ -36,5 +36,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 // 	char s2[]="mohammed";
 
 // 	printf("%d", ft_memcmp(s1,s2,5));
-// 	return 0;
+// 	return (0);
 // }

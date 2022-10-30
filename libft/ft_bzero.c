@@ -6,7 +6,7 @@
 /*   By: mofaisal <mofaisal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 14:58:11 by mofaisal          #+#    #+#             */
-/*   Updated: 2022/10/09 16:51:02 by mofaisal         ###   ########.fr       */
+/*   Updated: 2022/10/30 18:05:51 by mofaisal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	ft_bzero(void *s, size_t n)
 
 	i = 0;
 	tmp = (char *)s;
-	// if (n == 0)
-	// 	return (NULL);
 	while (i < (int)n)
 	{
 		tmp[i] = 0;

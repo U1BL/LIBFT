@@ -1,18 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mofaisal <mofaisal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 14:59:08 by mofaisal          #+#    #+#             */
-/*   Updated: 2022/10/30 18:40:33 by mofaisal         ###   ########.fr       */
+/*   Created: 2022/10/27 17:55:11 by mofaisal          #+#    #+#             */
+/*   Updated: 2022/10/27 20:53:33 by mofaisal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "libft.h"
+
+void	ft_putendl_fd(char const *s, int fd)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	size_t	i;
+
+	i = 0;
+	if (s != NULL)
+	{
+		while (s[i] != '\0')
+		{
+			write(fd, &s[i], 1);
+			i++;
+		}
+		write(fd, "\n", 1);
+	}
 }
+//  int main()
+//  {
+//  	char str[20] = "Life is good.";
+//  	ft_putendl_fd(str, 1);
+//  	return (0);
+//  }

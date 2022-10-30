@@ -6,11 +6,13 @@
 /*   By: mofaisal <mofaisal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 14:58:24 by mofaisal          #+#    #+#             */
-/*   Updated: 2022/10/02 14:19:19 by mofaisal         ###   ########.fr       */
+/*   Updated: 2022/10/30 18:29:32 by mofaisal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isdigit(int c)
+#include "libft.h"
+
+int	ft_isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
 		return (1);

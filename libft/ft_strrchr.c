@@ -6,7 +6,7 @@
 /*   By: mofaisal <mofaisal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/25 14:59:05 by mofaisal          #+#    #+#             */
-/*   Updated: 2022/10/09 21:01:00 by mofaisal         ###   ########.fr       */
+/*   Updated: 2022/10/30 18:37:13 by mofaisal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char		*last;
-	char		find;
-	size_t		i;
+	char	*last;
+	char	find;
+	size_t	i;
 
 	last = (char *)s;
 	find = (char)c;

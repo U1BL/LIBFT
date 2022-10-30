@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mofaisal <mofaisal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 14:59:08 by mofaisal          #+#    #+#             */
-/*   Updated: 2022/10/30 18:40:33 by mofaisal         ###   ########.fr       */
+/*   Created: 2022/10/27 17:53:36 by mofaisal          #+#    #+#             */
+/*   Updated: 2022/10/30 18:35:13 by mofaisal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "libft.h"
+
+void	ft_putchar_fd(char c, int fd)
 {
-	if (c >= 'A' && c <= 'Z')
-		c += 32;
-	return (c);
+	write(fd, &c, 1);
 }
+// int main ()
+//  {
+//      char letter = 'A';
+//      ft_putchar_fd(letter, 2);
+//      return(0);
+//  }
